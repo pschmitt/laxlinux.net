@@ -1,0 +1,42 @@
+<img class="illustration"
+     src="./files/pictures/sherlock.png"
+     height="199"
+     width="155"
+     alt="Sherlock (Google ?) knows everything 'bout you." />
+<div class="content" id="content_ip">
+    <h1>$ whoami</h1>
+    <p>
+        <span class="uinfost">ip:</span>
+        <?
+            echo $_SERVER["REMOTE_ADDR"];
+        ?>
+        <br />
+        <span class="uinfost">host:</span>
+        <?
+            echo gethostbyaddr($_SERVER["REMOTE_ADDR"]);  
+        ?>
+        <br />
+        <span class="uinfost">user agent:</span>
+        <?
+            echo $_SERVER["HTTP_USER_AGENT"];
+        ?>
+        <br />
+        <span class="uinfost">time:</span>
+        <?
+            echo time();
+        ?>
+    </p>
+    <p>
+        Êtes-vous
+        <span class="hold_em">
+            <img src="./files/pictures/link/nofav.png"
+                 width="12"
+                 height="12"
+                 alt="no-favicon_logo"/>
+            <a onclick="window.open(this.href); return false;" href="http://hadopi.p4ul.info/" title="Hadopi Explorer">
+                un pirate selon HADOPI
+            </a>
+        </span>
+        ?
+    </p>
+</div>

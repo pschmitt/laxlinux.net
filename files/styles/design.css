@@ -1,0 +1,728 @@
+/*----------------------*/
+/*  GENERAL PROPERTIES  */
+/*----------------------*/
+html {
+    font-size: 80%;
+    background-color: white;
+    font-family: Droid-Sans, Verdana, "Lucida Console", Arial, sans-serif; /* droid: police officielle d'Android */
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+p + p {
+    margin-top: 10px;
+}
+
+* img {
+    border: 0px;
+}
+
+.illustration {
+    float: right; 
+}
+
+h1 {
+    clear: left;
+    text-indent: 0px;
+    font-size: 1.6em;
+}
+
+h2 {
+    clear: left;
+    text-indent: 0px;
+    font-size: 1.4em;
+    padding-top: 40px;
+}
+
+h3 {
+    clear: left;
+    text-indent: 0px;
+    font-size: 1.2em;
+    padding-top: 20px;
+}
+
+h4 {
+    clear: left;
+    text-indent: 0px;
+    font-size: 1em;
+    padding-top: 10px;
+}
+
+h1 + h2 {
+    padding-top: 20px;
+}
+
+ul {
+    margin-left: 20px;
+}
+
+a:link { 
+	color: #333333;
+}
+
+a:visited { /* Pas de coloration spécifiques des liens déjà visités */ 
+	color: #333333;
+}
+
+a:hover {
+	color: #CCCCCC;
+	background-color: #333333;
+	text-decoration: none;
+}
+
+a:active {
+	color: #333333;
+}
+
+a.pic:hover {
+    background: none;
+}
+
+
+/*----------------------*/
+/*      COMPONENTS      */
+/*----------------------*/
+#container {
+    position: absolute;
+        top: 0px;
+        left: 0px;
+    width: 100%;       
+    min-height: 99%;
+    min-width: 900px;
+border: 1px;
+}
+
+#header {
+    height: 40px;
+    margin-top: 10px;
+    text-align: right;
+    background-color: #99cc67;
+}
+
+#header p {
+    margin-right: 5px;
+}
+
+#menu {
+    position: absolute;
+        top: 60px;
+    float: left;
+    margin-left: 5px;
+}
+
+#menu ol {
+    list-style-type: lower-greek;
+    margin-left: 20px;
+}
+
+#validator {
+    margin-top: 30px;
+}
+
+#searchbox {
+    margin-top: 20px;
+}
+
+#search_button {
+    float: right;
+    /*position: relative;
+        left: 30px;
+    text-align: center; */
+}
+
+#footer {
+    position: absolute;
+        left: 50%;
+        right: 50%;
+        bottom: 0px;
+    margin: auto -225px -5px -225px;
+    width: 450px;
+    text-align: center;
+}
+
+#footer hr {
+    margin: auto;
+    height: 1px;
+    width: 98%;
+    background-color: gray;
+    border: 0px;
+}
+
+
+/*----------------------*/
+/*        CONTENT       */
+/*----------------------*/
+.content {
+    margin-top: 10px;
+    margin-left: 180px;
+    width: 60%;
+    margin-bottom: 60px;
+}
+
+.tux-deco {
+    float: left;
+    padding: 20px 50px 0px 0px;
+}
+
+.descr-txt {
+    position: relative;
+        top: 15px;
+}
+
+.NB {
+    font-style: italic;
+    text-decoration: underline; 
+}
+
+.eg {
+    font-style: italic;
+}
+
+.matrix:hover {
+    color: green;
+    font-style: italic;
+}
+
+.evil:hover {
+    color: red;
+    text-decoration: line-through;
+}
+
+.hold_em {
+    white-space:nowrap;
+}
+
+table {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 0px;
+    border-spacing: 0px;
+}
+
+table caption {
+    caption-side: top;
+    text-align: left;
+    padding-bottom: 5px;
+}
+
+td, tr {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+tr:hover {
+    color: white; 
+    background-color: gray;
+}
+
+tr:hover a {
+    color: white;
+}
+
+tr:hover th {
+    background-color: #333333;
+}
+
+
+/*----------------------*/
+/*      COMPONENTS      */
+/*----------------------*/
+#container {
+    position: absolute;
+        top: 0px;
+        left: 0px;
+    width: 100%;       
+    min-height: 99%;
+}
+
+#header {
+    height: 40px;
+    margin-top: 10px;
+    text-align: right;
+    background-color: #99cc67;
+}
+
+#header p {
+    margin-right: 5px;
+}
+
+#menu {
+    position: absolute;
+        top: 60px;
+    float: left;
+    margin-left: 5px;
+}
+
+#report {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#report-img {
+    width: 89px;
+    height: 36px;
+}
+
+
+/*----------------------*/
+/*         /HOME        */
+/*----------------------*/
+#content_h {
+    float: left;
+}
+
+#hidden {           /* STUPID AIN'T IT ?! => NOBODY WILL HELP YA */
+    display: none;
+}
+
+#content_h h2 {
+    clear: none;
+}
+
+#content_h h2 + p {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+#content_h table th {
+    height: 50px;
+    width: 40px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/*#content_h th a {  //DÉCENTRE
+    display: block;
+    height: 100%;
+    width: 100%;
+}*/
+
+#self_link {
+    list-style-image:url(../pictures/link/laxl.png);
+}
+
+#vocab_link {
+    list-style-image:url(../pictures/link/vocab.png);
+}
+
+#dl_link {
+    list-style-image:url(../pictures/link/dl.png);
+}
+
+#blocker {
+    margin-left: 350px;
+}
+
+#shoutbox {
+    position: absolute; 
+        top: 80px;
+        right: 5px;
+    margin-left: 30px;
+    height: 275px;
+    width: 150px;
+    border: 0px;
+}
+
+
+/*----------------------*/
+/*        /HISTORY      */
+/*----------------------*/
+
+
+
+/*----------------------*/
+/*        /HOWTO        */
+/*----------------------*/
+ul + p {
+    margin-top: 8px;
+}
+
+#content_ht table {
+    border-spacing: 2px;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+
+#content_ht table caption {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+#content_ht table th {
+    margin-top: 5px;
+    border: 0px;
+    text-align: left;
+    padding-left: 3px;
+    padding-right: 5px;
+}
+
+#content_ht table td {
+    text-align: left;
+    padding-left: 15px;
+    padding-right:210px;
+}
+
+#content_ht table tr:hover {
+    background-color: gray;
+}
+
+.console {
+    /*background-color: black;
+    color: green;*/
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+/*----------------------*/
+/*         /cmd         */
+/*----------------------*/
+#content_cmd ol {
+    list-style-image:url(../pictures/link/shebang.png);
+    margin-left: 50px;
+    margin-top: 50px;
+    clear: both;
+}
+
+.first_ol {
+    margin-bottom: -30px;
+    clear: both;
+}
+
+.etiq {
+    position: relative;
+        top: -3px;
+    font-weight: bold;
+}
+
+#content_cmd ol + p {
+    margin: 5px auto 10px 60px;
+}
+
+.syntax_t {
+    float: left;
+    margin: 5px auto 10px 65px;
+}
+
+.syntax {
+    float: left;
+    margin: 5px auto 10px 10px;
+}
+
+.push_down {
+    clear: both;
+}
+
+#climb_up {
+    position: relative;
+        top: -70px;
+}
+
+.chmod_mod {
+    float: left;
+    margin-left: 10px;
+
+}
+
+.chmod_mod th {
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.chmod_mod caption {
+    caption-side: top;
+    font-style: italic;
+    text-align: right;
+}
+
+.spacer {
+    margin-top: 30px;
+}
+
+
+/*----------------------*/
+/*        /APPS         */
+/*----------------------*/
+#content_apps table th {
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: left;
+}
+
+#content_apps table caption {
+    caption-side: bottom;
+    text-align: right;
+    font-style: italic;
+}
+
+
+/*----------------------*/
+/*        /FILES        */
+/*----------------------*/
+#illustration_files {
+    position: absolute;
+        top: 70px;
+        left: 350px;
+}
+
+#content_files ul {
+    margin-left: 35px; 
+}
+
+.folder {
+    list-style-image:url(../pictures/link/folder.png);
+}
+
+.file {
+    list-style-image:url(../pictures/link/file.png);
+}
+
+.eti {
+    position: relative;
+        top: -10px;
+}
+
+#git {
+    margin-top: 100px;
+}
+
+#column2 {
+    position: absolute;
+        top: 62px;
+        left: 600px;
+}
+
+#google_search {
+    list-style-image:url(../pictures/link/google.ico);
+}
+
+.wiki_search {
+    list-style-image:url(../pictures/link/wikipedia.ico);
+}
+
+#wolfram_search {
+    list-style-image:url(../pictures/link/wolfram.ico);
+}
+
+#ebay_search {
+    list-style-image:url(../pictures/link/ebay.ico);
+}
+
+#amazon_search {
+    list-style-image:url(../pictures/link/amazon.ico);
+}
+
+.arch_search {
+    list-style-image:url(../pictures/link/arch.ico);
+}
+
+.arch-fr_search {
+    list-style-image:url(../pictures/link/archlinux-fr.png);
+}
+
+#ubuntu_search {
+    list-style-image:url(../pictures/link/ubuntu.png);
+}
+
+#userscripts_search {
+    list-style-image:url(../pictures/link/userscripts.png);
+}
+
+#thepiratebay_search {
+    list-style-image:url(../pictures/link/thepiratebay.png);
+}
+
+#h33t_search {
+    list-style-image:url(../pictures/link/h33t.png);
+}
+#facebook_search {
+    list-style-image:url(../pictures/link/facebook.ico);
+}
+
+#twitter_search {
+    list-style-image:url(../pictures/link/twitter.ico);
+}
+
+#allocine_search {
+    list-style-image:url(../pictures/link/allocine.ico);
+}
+
+#youtube_search {
+    list-style-image:url(../pictures/link/youtube.ico);
+}
+
+#dailymotion_search {
+    list-style-image:url(../pictures/link/dailymotion.ico);
+}
+
+.separator {
+    width: 60%;
+    margin: 180px auto 40px auto;
+}
+
+#content_files ol {
+    margin-left: 80px;
+}
+
+.important {
+    font-weight: 800;
+    text-decoration: underline;
+}
+
+#screenshot {
+    margin-top: 50px;
+}
+
+#img-title {
+    font-style: italic;
+    margin-left: 620px; 
+}
+
+#extension {
+    list-style-image:url(../pictures/link/extension.png);
+}
+
+.content_descr {
+    clear: left;
+}
+
+
+/*----------------------*/
+/*        /UNI          */
+/*----------------------*/
+#spacerNB {
+    margin-top: 40px;
+}
+
+
+/*----------------------*/
+/*        /VOCAB        */
+/*----------------------*/
+#content_voc table th {
+    height: 30px;
+    width: 100px;
+    text-align: right;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#content_voc table caption {
+    caption-side: bottom;
+    text-align: right;
+    font-style: italic;
+}
+
+/*----------------------*/
+/*        /WHOAMI       */
+/*----------------------*/
+.uinfost {
+    font-weight: bold;
+}
+
+/*----------------------*/
+/*     /GET_INVOLVED    */
+/*----------------------*/
+#content_tp h3 {
+    clear: both;
+}
+
+#decall1 {
+    margin-top: 12px;
+}
+
+#decall2 {
+    margin-top: 40px;
+    padding-left: 20px;
+}
+
+/*----------------------*/
+/*        /WHOIS        */
+/*----------------------*/
+#content_who {
+    width: 480px;
+}
+
+#lang {
+    float: right;
+    position: absolute;
+        top: 55px;
+        right: 5px;
+}
+
+.ttle {
+    font-weight: bold;
+}
+
+
+/*----------------------*/
+/*       /CREDITS       */
+/*----------------------*/
+#content_cr h2, h3 {
+    clear: none;            /* NON NÉCESSAIRE SUR HOME.HTML CAR PAS DE H2-3 */
+}
+
+
+/*----------------------*/
+/*       /SOURCES       */
+/*----------------------*/
+#content_sces h3 {
+    clear: both;
+}
+
+.s_img {
+    float: left;
+    background: none;
+}
+
+#just_for_fun {
+    margin-left: 15px;
+}
+
+#just_for_fun p {
+    width: 154px;
+    margin-top: -3px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+#dev-txt {
+    position: relative;
+        top: 40px;
+        left: 10px;
+}
+
+
+
+/*----------------------*/
+/*       /SEARCH        */
+/*----------------------*/
+.big_bug {
+    font-size: 3em;
+    color: red;
+}
+
+.solve_it {
+    position: relative;
+    top: -22px;
+    left: 5px;
+}
+
+
+/*----------------------*/
+/*         /WAWA        */
+/*----------------------*/
+.musik {
+    list-style-image:url(../pictures/link/musik.png);
+}
+
+
+/*----------------------*/
+/*          /404        */
+/*----------------------*/
+#content_404 h1 {
+    clear: none;
+}
+

@@ -1,0 +1,178 @@
+<!DOCTYPE HTML>
+<html id="index">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>MMS Project | Jeu de mémoire</title>
+        <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+		<link rel="shortcut icon" href="./images/star.png" />
+		<link rel="icon" type="image/png" href="./images/star.png" />
+		<!--[if IE]>
+			<style type="text/css">
+			.clear {
+			  zoom: 1;
+			  display: block;
+			}
+			</style>
+        <![endif]-->
+		<link type="text/css" href="./css/ui-lightness/jquery-ui-1.8.15.custom.css" rel="Stylesheet" />	
+		<script type="text/javascript" src="./scripts/jquery-1.6.2.min.js"></script>
+		<script type="text/javascript" src="./scripts/jquery-ui-1.8.15.custom.min.js"></script>
+    </head>
+	
+    <body>
+    	<div class="section" id="page">
+            <div class="header">
+                <a href="./index.html">
+    	            <h1>Jeu de mémoire</h1>
+				</a>
+            </div>
+			<div class="section" id="articles">
+                <div class="line"></div>
+                <div class="main">
+                    <h2>Le jeu</h2>
+					<p id="roundNb"></p>
+                    <div class="line"></div>
+                    <div class="articleBody clear">
+						<div id="game" class="right" oncontextmenu="return false;">
+							<div id="loading">
+								<div id="disable_clickOne"></div>
+								<!--div id="adOne" class="advertisement"-->
+									<!--iframe id="adOne" src="http://rcm-fr.amazon.fr/e/cm?t=la058-21&amp;o=8&amp;p=6&amp;l=st1&amp;mode=video-games-fr&amp;search=linux&amp;fc1=000000&amp;lt1=_blank&amp;lc1=3366FF&amp;bg1=FFFFFF&amp;f=ifr" width="120" height="150"></iframe-->
+								<!--/div-->
+								<!--p id="your_adOne" class="advertisement">
+									<!a href="mailto:schmitt.philipp@laxlinux.net?Subject=Publicité%20sur%20LaXLinux.net" onclick="window.open(this.href); return false;">
+										Envie de faire figurer votre publicité sur ce site ?
+											<br/>
+										mailto: philipp.schmitt@laxlinux.net
+									</a>
+								</p-->
+								<div id="progress_bar_bg">
+									<div id="progress_bar_fg">
+									</div>
+								</div>
+								<p id="loading_txt">
+									<span id="additionnal_loading_txt">
+										Merci de patienter
+										<br />
+									</span>
+									Chargement en cours...
+									<br />
+									<span id="progress_bar_text">0%</span>
+								</p>
+								<div id="disable_clickTwo"></div>
+								<!--div id="adTwo" class="advertisement"-->
+									<!--iframe id="adTwo" src="http://rcm-fr.amazon.fr/e/cm?t=la058-21&amp;o=8&amp;p=6&amp;l=st1&amp;mode=computers&amp;search=acer&amp;fc1=000000&amp;lt1=_blank&amp;lc1=3366FF&amp;bg1=FFFFFF&amp;f=ifr" width="120" height="150"></iframe-->
+								<!--/div-->
+								<!--p id="your_adTwo" class="advertisement">
+									<!a href="mailto:schmitt.philipp@laxlinux.net?Subject=Publicité%20sur%20LaXLinux.net" onclick="window.open(this.href); return false;">
+										Envie de faire figurer votre publicité sur ce site ?
+										<br/>
+										mailto: philipp.schmitt@laxlinux.net
+									<!/a>
+								</p-->
+				        	</div>
+						<div id="grid">
+							<table class="grid">
+								<tr>
+									<td id="one-five"></td>
+									<td id="one-four"></td>
+									<td id="one-three"></td>
+									<td id="one-two"></td>
+									<td id="one-one"></td>
+							  	</tr>
+								<tr>
+									<td id="two-five"></td>
+									<td id="two-four"></td>
+									<td id="two-three"></td>
+									<td id="two-two"></td>
+									<td id="two-one"></td>
+			  	   				</tr>
+								<tr>
+									<td id="three-five"></td>
+									<td id="three-four"></td>
+									<td id="three-three"></td>
+									<td id="three-two"></td>
+									<td id="three-one"></td>
+								</tr>
+								<tr>
+									<td id="four-five"></td>
+									<td id="four-four"></td>
+									<td id="four-three"></td>
+									<td id="four-two"></td>
+									<td id="four-one"></td>
+								</tr>
+								<tr>
+									<td id="five-five"></td>
+									<td id="five-four"></td>
+									<td id="five-three"></td>
+									<td id="five-two"></td>
+									<td id="five-one"></td>
+								</tr>
+							</table>
+							</div>
+		                </div>
+					<div id="instructions">
+						<p>
+							Bonjour,
+							<br/>
+							<br/>
+							Merci de participer à ce jeu de mémoire.
+							<br/>
+							<br/>
+							Le jeu consiste à retenir la position d’images réparties dans une grille.
+							<br/>
+							Ainsi, 6 images seront réparties de façon aléatoire dans une grille de 25 cases. Cette grille sera affichée pendant 3 secondes.
+							<br/>
+							<br/>
+							Ensuite, vous devrez repositionner <b>de mémoire</b> les images dans une grille vierge, en cliquant dans les cases vides. Notez que vous pourrez effacer la position d’une image en cliquant une nouvelle fois dessus.
+							<br/>
+							<br/>
+							Lorsque vous penserez avoir correctement répondu, vous validerez votre grille à l’aide du bouton « Valider ».
+							<br/>
+							<br/>
+							Le jeu sera répété 5 fois, avec à chaque fois une nouvelle grille à retenir.
+							<br/>
+							<br/>
+							A la fin du jeu, merci de bien vouloir <b>répondre le plus sérieusement possible à quelques questions</b>, avant d’obtenir votre score que vous pourrez partager et confronter à celui de vos contacts sur Facebook !
+							<br/>
+							<br/>
+							Un essai vous est d’abord proposé, avant que le jeu ne commence réellement.
+							<br/>
+							<br/>
+							Cliquez sur « Démarrer l’essai ».	
+						</p>
+					</div>
+					<div id="but_div">
+						<button type="button" id="start" onclick="initialization()">Démarrer l'essai</button>
+					</div>
+					<form id="hiddenform" action="survey.php" method="post">
+    						<input type="hidden" name="score"  id="score"  value="-1" />
+							<input type="hidden" name="errors" id="errors" value="-1" />
+							<input type="hidden" name="wperiod" id="wperiod"   value="-1" />
+							<input type="hidden" name="wbplay" id="wbplay" value="4" />
+							<input type="hidden" name="junk"   id="junk"   value="-1" />
+							<!--input type="submit" value="Click me - HAHA YOU CANNOT" /-->
+							<input id="solOne" 	 type="hidden" name="solOne"   value="s1" />
+							<input id="solTwo" 	 type="hidden" name="solTwo"   value="s2" />
+							<input id="solThree" type="hidden" name="solThree" value="s3" />
+							<input id="solFour"  type="hidden" name="solFour"  value="s4" />
+							<input id="solFive"  type="hidden" name="solFive"  value = "s5" />
+							<!-- -->
+							<input id="uaOne" 	 type="hidden" name="uaOne"   value="u1" />
+							<input id="uaTwo" 	 type="hidden" name="uaTwo"   value="u2" />
+							<input id="uaThree"  type="hidden" name="uaThree" value="u3" />
+							<input id="uaFour"   type="hidden" name="uaFour"  value="u4" />
+							<input id="uaFive"   type="hidden" name="uaFive"  value="u5" />
+					</form>
+                </div>
+            </div>
+			<div class="footer">
+			  	<div class="line"></div>
+				<p>DFHI Informatik Team</p>
+			</div>
+			
+		</div>
+	</div>
+    <script type="text/javascript" src="./scripts/script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,561 @@
+<img class="illustration"
+     src="./files/pictures/terminal.png"
+     height="128"
+     width="128"
+     alt="terminal_emulator" />
+<div class="content" id="content_cmd">
+    <h1>$ man commands</h1>
+    <p>
+        Dans cette section, nous nous intéresserons aux commandes pratiques d'<span class="matrix">UNIX/Linux</span>.
+    </p>
+    <p>
+        <span class="NB">Nota Bene</span>: dans ce qui suit le symbôle précédant une commande vous indique les droits nécessaires
+        pour executer ladite commande.
+        <span class="eg">Confer</span>:
+        <span class="hold_em">
+            <img src="./files/pictures/link/vocab.png"
+                 width="16"
+                 height="9"
+                 alt="LaXLinux_logo" />
+            <a href="index.php?p=vocab#dollar" title="define: $">
+                $
+            </a>
+        </span>
+        et
+        <span class="hold_em">
+            <img src="./files/pictures/link/vocab.png"
+                 width="16"
+                 height="9"
+                 alt="LaXLinux_logo" />
+            <a href="index.php?p=vocab#bang" title="define: #">
+                #
+            </a>
+        </span>
+        .
+    </p>
+    <p>
+        <span class="NB">Nota Bene 2</span>: Les crochets indiquent un paramètre facultatif.
+    </p>
+    <p>
+        <span class="NB">Nota Bene 3</span>: Pensez à remplacer les valeurs comprises entre "*"..!
+    </p>
+    <h2>Commandes basiques</h2>
+    <p class="first_ol">
+        Pour commencer, les grands classiques:
+    </p>
+    <ol>
+        <li id="man">
+            <span class="etiq">$ man (manual)</span>
+        </li>
+    </ol>
+    <p>
+        man affiche le manuel d'une commande afin d'en connaître la syntaxe, par exemple.
+        <br />
+        Elle devrait être la commande la plus utilisée, c'est la meilleure arme contre les
+        <span class="hold_em">
+            <img src="./files/pictures/link/vocab.png"
+                 width="16"
+                 height="9"
+                 alt="LaXLinux_logo" />
+            <a href="index.php?p=vocab#rtfm" title="define: rtfm">
+                RTFM
+            </a>
+        </span>
+        .
+    </p>
+    <p class="syntax_t">
+        <span class="eg">Syntaxe</span>:
+    </p>
+    <code class="syntax">
+        man *commande*
+    </code>
+    <ol>
+        <li id="pwd">
+            <span class="etiq">$ pwd (print working directory)</span>
+        </li>
+    </ol>
+    <p>
+        Afficihe le nom du répertoire courrant.
+        <br />
+        Relativement peu utilisé (en dehors des
+        <span class="hold_em">
+            <img src="./files/pictures/link/vocab.png"
+                 width="16"
+                 height="9"
+                 alt="LaXLinux_logo" />
+            <a href="index.php?p=vocab#script" title="define: script">
+                scripts
+            </a>
+        </span>
+        bash) puisque la plupart des
+        <span class="hold_em">
+            <img src="./files/pictures/link/vocab.png"
+                 width="16"
+                 height="9"
+                 alt="LaXLinux_logo" />
+            <a href="index.php?p=vocab#shell" title="define: shell">
+                shell
+            </a>
+        </span>
+        comme bash ou zsh, vous indiquent en permanence où vous vous trouvez.
+    </p>
+    <p class="syntax_t">
+        <span class="eg">Syntaxe</span>:
+    </p>
+    <code class="syntax">
+        pwd
+    </code>
+    <ol>
+        <li id="ls">
+            <span class="etiq">$ ls (list segments)</span>
+        </li>
+    </ol>
+    <p>
+        Affiche le contenu d'un repertoire (le repertoire courant, par défaut).
+        <br />
+        <span class="eg">Options courantes</span>: 'ls -a' : affiche tout (repertoire cachés notamment),
+        'ls -l' affiche les droits d'accès, le type et la taille du dossier.
+    </p>
+    <p class="syntax_t">
+        <span class="eg">Syntaxe</span>:
+    </p>
+    <code class="syntax">
+        ls [-a|l] [*repertoire*]
+    </code>
+    <ol>
+        <li id="cd">
+            <span class="etiq">$ cd (change directory)</span>
+        </li>
+    </ol>
+    <p>
+        Permet de changer de repertoire.
+        <br />
+        <span class="eg">Raccourcis</span>; 'cd' seul ou 'cd ~' : /home/*votre_nom* ; 'cd -' : précédent
+    </p>
+    <p class="syntax_t">
+        <span class="eg">Syntaxe</span>:
+    </p>
+    <code class="syntax">
+        cd *nom_du_repertoire*
+    </code>
+    <ol>
+        <li id="su">
+            <span class="etiq">$ su (switch user)</span>
+        </li>
+    </ol>
+    <p>
+        La commande pour changer d'utilisateur.
+        <br />
+        <span class="eg">Option courante</span>: 'su' seul équivaut à 'su root'
+    </p>
+    <p class="syntax_t">
+        <span class="eg">Syntaxe</span>:
+    </p>
+    <code class="syntax">
+        su *utilisateur*
+    </code>
+    <p class="push_down">
+        <span class="NB">Nota Bene</span>: 'su' et 'sudo' ne sont pas les mêmes commandes ! En effet, 'sudo'
+        est un
+        <span class="hold_em">
+            <img src="./files/pictures/link/vocab.png"
+                 width="16"
+                 height="9"
+                 alt="LaXLinux_logo" />
+            <a href="index.php?p=vocab#package" title="define: paquet">
+                paquet
+            </a>
+        </span>
+        qui confère les droits administratifs à un utilisateur pendant une certaine durée, cette solution est
+        d'ailleurs discutable en matière de sécurité.
+    </p>
+    
+    <h2>Commandes et fichiers</h2>
+    <h3>Créer des fichiers</h3>
+    <p class="first_ol">
+        Alors maintenant qu'on sait comment se déplacer, comment créer de nouveaux fichiers ?
+    </p>
+    <ol>
+        <li id="mkdir">
+            <span class="etiq">$ mkdir (make directory)</span>
+        </li>
+    </ol>
+    <p class="push_down">
+        Permet de créer un dossier.
+        <br />
+        <span class="eg">Options courantes</span>: 'mkdir -p' : créer le dossier et ses parents s'ils manquent pour
+        éviter de lancer plusieurs fois la commande ; 'mkdir -m *mode*' : créer un dossier en spécifiant ses
+        droits d'accès
+    </p>
+    <p class="syntax_t">
+        <span class="eg">Syntaxe</span>:
+    </p>
+    <code class="syntax">
+        mkdir [-m|p] [*mode*] *nom_du_futur_dossier*
+    </code>
+    <ol>
+        <li id="touch">
+            <span class="etiq">$ touch</span>
+        </li>
+    </ol>
+    <p class="push_down">
+        Permet de créer un fichier.
+    </p>
+    <p class="syntax_t">
+        <span class="eg">Syntaxe</span>:
+    </p>
+    <code class="syntax">
+        touch *nom_du_futur_fichier*
+    </code>
+    <p class="push_down">
+        <span class="NB">Nota Bene</span>: 'touch' n'est originalement pas destiné à créer des fichiers. Cette commande
+        sert avant tout à mettre à jour la date d'accès à un fichier mais est toujours présentée quant il s'agit de faire
+        créer un nouveau fichier.
+        Pour être honnête, il n'existe pas de commande spécifique pour cela.
+        Généralement, on redirige la sortie d'une commande
+        vers un fichier, celui-ci est alors créé s'il n'existe pas encore.
+    </p>
+
+    <h3 class="push_down">Manipuler des fichiers</h3>
+    <h4 class="push_down">Les protéger</h4>
+    <p class="first_ol">
+       Nous vérons ici en un premier lieu, comment manipuler les droits d'accès des fichiers.
+    </p>
+    <ol>
+        <li id="chown">
+            <span class="etiq"># chown (change owner)</span>
+        </li>
+    </ol>
+    <p>
+        Cette commande permet de changer le nom du propriétaire du fichier.
+        <br />
+        <span class="eg">Option courante</span>: 'chown -R' : applique recursivement les nouveaux droits.
+    </p>
+    <p class="syntax_t">
+        <span class="eg">Syntaxe</span>:
+    </p>
+    <code class="syntax">
+        chown [-R] *utilisateur* *fichier*
+    </code>
+    <p class="first_ol">
+        <span class="NB">Nota Bene</span>: Vous avez sans doute remarqué qu'il y avait un
+        <span class="hold_em">
+            <img src="./files/pictures/link/vocab.png"
+                 width="16"
+                 height="9"
+                 alt="LaXLinux_logo" />
+            <a href="index.php?p=vocab#bang" title="define: #">
+                #
+            </a>
+        </span>
+        avant cette commande, en effet certaines
+        <span class="hold_em">
+            <img src="./files/pictures/link/vocab.png"
+                 width="16"
+                 height="9"
+                 alt="LaXLinux_logo" />
+            <a href="index.php?p=vocab#distro" title="define: distribution">
+                distributions
+            </a>
+        </span>
+        interdisent l'utilisation de cette commande à tout utilisateur (hormis root).
+    </p>
+    <ol>
+        <li id="chmod">
+            <span class="etiq">$ chmod (change mode)</span>
+        </li>
+    </ol>
+    <p class="push_down">
+        Permet de définir les droits d'accès à un fichier.
+        <br />
+        <span class="eg">Options courantes</span>: 'chmod -R' : applique récursivement les droits d'accès ;
+        'chmod --preserve-root' : permet d'empêcher d'appliquer la récursivité à partir de '/' (mesure de
+        sécurité).
+    </p>
+    <p class="syntax_t">
+        <span class="eg">Syntaxe</span>:
+    </p>
+    <code class="syntax">
+        chmod [-R|--preserve-root] *mode* *fichier*
+    </code>
+    <p class="push_down">
+        <span class="NB">Nota Bene</span>: Alors, c'est quoi ces modes ? <span class="eg">Confer</span>:
+    </p>
+    <table class="chmod_mod">
+        <caption>
+            Qui ?
+        </caption>
+        <tr>
+            <th>u</th>
+            <td>Propriétaire du fichier</td>
+        </tr>
+        <tr>
+            <th>g</th>
+            <td>Groupe propriétaire</td>
+        </tr>
+        <tr>
+            <th>o</th>
+            <td>Les autres</td>
+        </tr>
+        <tr>
+            <th>a</th>
+            <td>Tout le monde</td>
+        </tr>
+    </table> 
+    <table class="chmod_mod">
+        <caption>
+            Quoi ?
+        </caption>
+        <tr>
+            <th>&plusmn;r</th>
+            <td>Lecture</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <th>&plusmn;w</th>
+            <td>Écriture</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <th>&plusmn;x</th>
+            <td>Execution</td>
+            <td>1</td>
+        </tr>
+    </table>
+    <p class="push_down">
+        <span class="eg">Exemples</span>:
+    </p>
+    <code>
+        chmod 777 script.sh #lecture, écriture, execution pour tout le monde
+        <br />
+        chmod a+rxw script.sh #idem
+    </code>
+
+    <h4 class="spacer">Les manipuler</h4>
+    <p class="first_ol">
+        On véra ici, comment copier, déplacer et déplacer des fichiers.
+    </p>
+    <ol>
+        <li>
+            <span class="etiq">$ cp (copy)</span>
+        </li>
+    </ol>
+    <p>
+        Copier un fichier.
+        <br />
+        <span class="eg">Options courantes</span>: 'cp -f' : écrase le fichier de sortie, s'il existe ; 'cp -s' : création d'un lien symbolique, au lieu de copier (équivalent à 'ln -s' ; 'cp -u' : MAJ, ne copier que si l'élément source est plus récent que l'autre. 
+    </p>
+    <p class="syntax_t">
+        <span class="eg">Syntaxe</span>:
+    </p>
+    <code class="syntax">
+        cp [-f|s|u] *chemin_du_fichier_d'origine* *chemin_du_nouveau_fichier*
+    </code>
+    <ol>
+        <li>
+            <span class="etiq">$ mv (move)</span>
+        </li>
+    </ol>
+    <p>
+        Déplacer un fichier. Sert aussi à renommer.
+        <br />
+        <span class="eg">Option courante</span>: 'mv -f' : écrase le fichier s'il existe déjà
+    </p>
+    <p class="syntax_t">
+        <span class="eg">Syntaxe</span>:
+    </p>
+    <code class="syntax">
+        mv [-f] *chemin_du_fichier_d'origine* *chemin_du_nouveau_fichier*
+    </code>
+    <ol>
+        <li>
+            <span class="etiq">$ rm (remove)</span>
+        </li>
+    </ol>
+    <p>
+        Efface un fichier. 
+        <br />
+        <span class="eg">Options courantes</span>: 'rm -f' : ne pas afficher le dialogue de confirmation ; 'rm -r' : efface récursivement 
+    </p>
+    <p class="syntax_t">
+        <span class="eg">Syntaxe</span>:
+    </p>
+    <code class="syntax">
+        rm [-f|r] *fichier*
+    </code>
+    <p class="push_down">
+        <span class="NB">Nota Bene</span>: Par défaut, 'rm' ne supprime pas les dossiers.
+    </p>
+    <ol>
+        <li>
+            <span class="etiq">$ rmdir (remove directory)</span>
+        </li>
+    </ol>
+    <p>
+        Efface un dossier vide.
+        <br />
+        <span class="eg">Options courantes</span>:'rmdir --ignore-fail-on-non-empty' : permet d'effacer des dossiers qui ne sont pas vides ; 'rmdir -p' : efface les dossiers parents si ceux-ci sont vides après la suppression du premier dossier.
+    </p>
+    <p class="syntax_t">
+        <span class="eg">Syntaxe</span>:
+    </p>
+    <code class="syntax">
+        rmdir [-f|--ignore-fail-on-non-empty] *dossier*
+    </code>
+
+    <h4 class="spacer">Les trouver</h4>
+    <p class="first_ol">
+        Pour trouver un fichier, il y a 3 commandes importantes:
+    </p>
+    <ol>
+        <li>
+            <span class="etiq">$ locate</span>
+        </li>
+    </ol>
+    <p>
+        Trouver un fichier, sachant son nom.
+        <br />
+        'locate' utilise une base de données pour trouver l'emplacement des fichiers. Celle-ci peut être mise à jour grâce à '# updatedb'.
+        <br />
+        <span class="eg">Options courantes</span>: 'locate -e' : n'afficher un résultat que si le fichier trouvé existe encore.
+    </p>
+    <p class="syntax_t">
+        <span class="eg">Syntaxe</span>:
+    </p>
+    <code class="syntax">
+        locate [-e] *nom_fichier_recherché*
+    </code>
+    <ol>
+        <li>
+            <span class="etiq">$ find</span>
+        </li>
+    </ol>
+    <p>
+        Cherche un fichier directement sur votre disque, sans passer par une BDD.
+        <br />
+        <span class="eg">Options courantes</span>: 'find -name' : chercher selon le nom ; 'find -size' : chercher selon la taille ; 'find -atime' : cherche selon la dernière date d'accès ; 'find -delete' : efface les fichiers trouvés ; 'find -exec' : execute un commande sur les fichiers trouvés.
+    </p>
+    <p class="syntax_t">
+        <span class="eg">Syntaxe</span>:
+    </p>
+    <code class="syntax">
+        find *dossier_où_chercher* [-name|size|atime|delete|exec] "*nom_exact_fichier_recherché*"
+    </code>
+    <p class="push_down">
+        <span class="NB">Nota Bene</span>: Pour 'find -exec', '{}' désigne les fichiers trouvés et la commande doit toujours
+        se terminer par les caractères '\;'.
+    </p>
+    <p class="push_down">
+        <span class="eg">Exemples</span>:
+    </p>
+    <code>
+        find ~ -name "*.foo.bar" -size +700M  -atime -10 -delete
+        <br />
+        #cherche et efface dans votre dossier personnel (/home/*votre_nom*) les fichiers dont le nom se
+        termine par '.foo.bar', qui pèse plus de 700Mo et auquel vous avez accédé au cours de 10 derniers jours.
+        <br />
+        find / -name "foo.bar" -exec cp {} ~/bin \;
+        <br />
+        #cherche et copie tous les fichiers de la racine nommés 'foo.bar' vers /home/*votre_nom*/bin
+    </code>
+    
+    <ol>
+        <li>
+            <span class="etiq">$ grep</span>
+        </li>
+    </ol>
+    <p>
+        Cette commande sert à rechercher un motif donné, dans un/des fichier(s).
+        <br />
+        <span class="eg">Options courantes</span>:'grep -i' : ignore la casse (sensible par défaut) ; 'grep -n' : ajouter le numéro de la ligne aux résultats ; 'grep -r' : recherche récursive ; 'grep -v' : inversion de la recherche, les résultats seront les lignes ne contenant pas le motif cherché
+    </p>
+    <p class="syntax_t">
+        <span class="eg">Syntaxe</span>:
+    </p>
+    <code class="syntax">
+        grep [-i|n|r|v] *motif* *fichier(s)*
+    </code>
+
+    <h2>Plus d'efficacité</h2>
+    <p>
+        Pour éviter de multiplier les commandes, pensez à utiliser les opérateurs logiques suivants:
+    </p>
+    <table class="chmod_mod">
+        <caption>
+            Opérateurs shell (liste non exhaustive)
+        </caption>
+        <tr>
+            <th>|</th>
+            <td>
+                ou inclusif
+            </td>
+            <td>
+                $ find / -name "foo.bar" | grep -i foobar
+            </td>
+        </tr>
+        <tr>
+            <th>||</th>
+            <td>
+                ou
+            </td>
+            <td>
+                $ rm foo.bar || echo Le fichier foo.bar n'existe pas
+            </td>
+        </tr>
+        <tr>
+            <th>&amp;</th>
+            <td>
+                et
+            </td>
+            <td>
+                $ rm foo.bar &amp; echo c'est en train de finir
+            </td>
+        </tr>
+        <tr>
+            <th>&amp;&amp;</th>
+            <td>
+                et logique
+            </td>
+            <td>
+                $ rm foo.bar &amp;&amp; echo c'est fini
+            </td>
+        </tr>
+    </table>
+
+    <h2 class="push_down">Cheat Sheet</h2>
+    <p>
+        Vous ne retiendrez jamais tout ça ? Ce petit pdf est fait pour vous:
+    </p>
+    <p>
+    <a class="pic" onclick="window.open(this.href); return false;" href="./files/media/school/cheatsheet.pdf">
+        <img src="./files/pictures/cheatcheat.png"
+             width="200"
+             height="141"
+             alt="CheatCheat" />
+    </a>
+        <span id="climb_up" class="hold_em">
+            <img src="./files/pictures/link/dl.png"
+                 width="16"
+                 height="9"
+                 alt="LaXLinux_logo" />
+            <a onclick="window.open(this.href); return false;" href="./files/media/school/cheatsheet.pdf">
+                Télécharger
+            </a>
+        </span>
+    </p>
+    <h2>Vous en voulez encore ?</h2>
+    <p>
+        Je recommande aux fous de la ligne de commande de jeter un petit coup d'&oelig;il, à l'excellent
+        <span class="hold_em">
+            <img src="./files/pictures/link/commandlinefu.png"
+                 width="12"
+                 height="12"
+                 alt="cmdlinefu_logo" />
+            <a href="http://www.commandlinefu.com/commands/browse" title="CommandLineFu.com">
+                CommandLineFu
+            </a>
+        </span>
+        . Vous y trouverez une multitude de commandes (in)utiles soumises par les utilisateurs, vous pourrez
+        ajouter les votres et noter les autres.
+    </p>
+</div>

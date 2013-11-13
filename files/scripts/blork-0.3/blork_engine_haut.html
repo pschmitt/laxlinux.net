@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr">
+    <head>
+        <meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
+        <meta http-equiv="content-script-type" content="text/javascript" />
+        <meta name="description" content="UNIX, Linux stuff" />
+        <meta name="author" content="Philipp SCHMITT" />
+        <meta name="keywords" content="linux, gnu, gnu/linux, html, internet, open-source" />
+        <meta name="date" content="2010-03-21T02:22:37+01:00" />
+        <link rel="shortcut icon" href="../../pictures/link/favicon.ico" />
+        <link rel="icon" type="image/gif" href="../../pictures/link/animated_favicon.gif" />
+        <link rel="stylesheet" type="text/css" media="screen" title="General Design" href="../../styles/design.css" />
+        <link rel="alternate" type="application/atom+xml" title="LaXLinux Feed" href="../../atom/laxlinux.xml" />
+        <script type="text/javascript" src="../util-functions.js"></script>
+        <script type="text/javascript" src="../clear-default-text.js"></script>
+        <title>LaXLinux.net</title>
+    </head>
+    <body>
+    <div id="container">
+        <div id="header">
+            <p>
+                <a href="../../../index.php?p=home">$ cd /</a> | 
+                <a href="javascript:history.go(-1)">$ cd -</a> | 
+                <a href="../../../index.php?p=ip">$ whoami</a> | 
+                <a href="../../../index.php?p=about">$ whois</a>
+            </p>
+        </div>
+        <div id="menu">
+            <h1>$ ls</h1>
+            <ol>
+                <li><a href="../../../index.php?p=home">home</a></li>
+                <li><a href="../../../index.php?p=history">histoire</a></li>
+                <li><a href="../../../index.php?p=howtos">installer</a></li>
+                <li><a href="../../../index.php?p=commands">commandes</a></li>
+                <li><a href="../../../index.php?p=apps">logiciels</a></li>
+                <li><a href="../../../index.php?p=files">fichiers</a></li>
+                <li><a href="../../../index.php?p=take_part">participer</a></li>
+                <li><a href="../../../index.php?p=vocab">vocabulaire</a></li>
+                <li><a href="../../../index.php?p=credits">credits</a></li>
+                <li><a href="../../../index.php?p=sources">sources</a></li>
+            </ol>
+            
+            <form id="searchbox" action="./engine.php" method="get" accept-charset="utf-8" class="cleardefault">
+                <p>
+                    <input type="text" name="blork" value="Recherche" maxlength="50" size="9" class="cleardefault" />
+                    <input type="hidden" name="cherche" value="go" />
+                    <input type="hidden" name="PHPSESSID" value="d6804b411c2782814b497fe84f0326ec" />
+                    <input id="search_button" type="image" src="../../pictures/search.png" alt="search" />
+                </p>
+            </form>
+            <div id="report">            
+                <form action="mailto:schmit.philipp@laxlinux.net">
+                    <p>
+                        <input type="hidden" name="body" />
+                        <input type="hidden" name="subject" value="/!\ (LaXL) Bug Report" />
+                        <input id="report-img"
+                               type="image"
+                               src="../../pictures/report.png"
+                               alt="BUG ? Faute d'orthographe ? Rapportez !"
+                               title="Rapporter une faute d'orthographe ou un bug"
+                               onclick="this.form.body.value='Referer:'+window.location.href+'\r\n\r\nBonjour Philipp, '" />
+                    </p>
+                </form>
+            </div>
+                <div id="validator">
+                <a class="pic" onclick="window.open(this.href); return false;" href="http://validator.w3.org/check?uri=referer" title="Valider le XHTML 1.1">
+                    <img src="../../pictures/valid-xhtml11-blue.png"
+                         height="31"
+                         width="88"
+                         alt="Valid XHTML 1.1" />
+                </a>
+                <br />
+                <a class="pic" onclick="window.open(this.href); return false;" href="http://jigsaw.w3.org/css-validator/check/referer" title="Valider le CSS 2.0">
+                    <img src="../../pictures/vcss-blue.gif"
+                         height="31"
+                         width="88"
+                         alt="CSS Valide !" />
+                </a>
+                <br />
+                <a class="pic" onclick="window.open(this.href); return false;" href="http://validator.w3.org/feed/check.cgi?url=http%3A//laxlinux.net/files/atom/laxlinux.xml" title="Valider le flux Atom 1.0">
+                    <img src="../../pictures/valid-atom.png"
+                         height="29"
+                         width="88"
+                         alt="[Valid Atom 1.0]"/>
+                </a>
+            </div>
+        </div>
+        <div id="footer">
+            <hr />
+            <p>
+                Ce site a été réalisé grâce à: <acronym title="Vi iMproved">Vim</acronym> , 
+                <acronym title="GUI for Vim">gVim</acronym>, 
+                <acronym title="web interface tools which adhere to the unix philosophy">uzbl</acronym> 
+                &amp; GNU/Linux
+            </p>
+        </div>
+
+        <div class="content" id="content_search">
+            <h1>$ find *</h1>
+            <!--<?php
+                if ($_SERVER["SERVER_NAME"] != "laxlinux.net")
+                    {
+                        echo "
+                                <span class=\"big_bug\"> Désolé, cette fonction s'avère ne pas fonctionner en local. </span>
+                                <br />
+                                <img src=\"../../pictures/arrow.png\"
+                                         width=\"72\"
+                                         height=\"50\"
+                                         alt=\"arrow\"/>
+                                <span class=\"solve_it\">
+                                    <span class=\"important\">Solution</span>: se rendre sur
+                                    <span class=\"hold_em\">
+                                        <img src=\"../../pictures/link/favicon.ico\"
+                                             width=\"12\"
+                                             height=\"12\"
+                                             alt=\"LaxLinux_logo\"/>
+                                        <a href=\"http://www.laxlinux.net\">
+                                            LaXLinux.net
+                                        </a>
+                                    </span>
+                                </span>
+                             ";
+                    }
+            ?> -->

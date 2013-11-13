@@ -1,0 +1,39 @@
+        <!--<?php
+                if ($_SERVER["SERVER_NAME"] != "laxlinux.net")
+                    {
+                        echo "
+                                <span class=\"big_bug\"> Désolé, cette fonction s'avère ne pas fonctionner en local. </span>
+                                <br />
+                                <img src=\"../../pictures/arrow.png\"
+                                         width=\"72\"
+                                         height=\"50\"
+                                         alt=\"arrow\"/>
+                                <span class=\"solve_it\">
+                                    <span class=\"important\">Solution</span>: se rendre sur
+                                    <span class=\"hold_em\">
+                                        <img src=\"../../pictures/link/favicon.ico\"
+                                             width=\"12\"
+                                             height=\"12\"
+                                             alt=\"LaxLinux_logo\"/>
+                                        <a href=\"http://www.laxlinux.net\">
+                                            LaXLinux.net
+                                        </a>
+                                    </span>
+                                </span>
+                             ";
+                    }
+            ?> -->
+            <p class="spacer">
+                <span class="NB">Nota Bene</span>: Ouais, Monsieur, le fait d'utiliser une boucle while au lieu d'une foreach a résolu le problème.
+            </p>
+            <p>
+                <span class="NB">Nota Bene 2</span>: Aussi, je me suis rendu compte que mon .htaccess sur mon espace web, dans lequel je précise quelle
+                version php utiliser (avec <span class="hold_em">'AddType x-mapp-php5 .php'</span>) avait été écrasé par ma version locale, qui ne contient pas cette ligne. Au final,
+                la version php avait été rétrogradée (php 4) - ce qui explique pourquoi la recherche fonctionnait online et pas en local. Vous aviez donc
+                raison sur ce point aussi. Merci !
+            </p>
+        </div>
+    </div>
+</body>
+</html>
+
